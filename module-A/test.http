@@ -1,0 +1,14 @@
+POST http://localhost:8081/upload
+Content-Type: multipart/form-data; boundary=WebAppBoundary
+
+--WebAppBoundary
+Content-Disposition: form-data; name="metadata"
+Content-Type: application/json
+
+{"fileName":"Licon"}
+--WebAppBoundary
+Content-Disposition: form-data; name="files"; filename="新建 文本文档.txt"
+Content-Type: multipart/form-data;
+
+< ./1.txt
+--WebAppBoundary--
